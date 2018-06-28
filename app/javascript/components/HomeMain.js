@@ -9,12 +9,11 @@ class HomeMain extends React.Component {
   
       // ConvoObj: {this.props.convoAry}
       // NotesObj: {this.props.notesAry}
-    
     return (
 
       <div className="wrapper">
         <Navi />
-        <div className="container border">
+        <div className="container border mt-5">
           <div className="row">
             <HomeHelp />
             <HomeTips />
