@@ -6,16 +6,13 @@ import {HomeTips} from "./HomeTips"
 
 class HomeMain extends React.Component {
   render () {
-  
-      // ConvoObj: {this.props.convoAry}
-      // NotesObj: {this.props.notesAry}
     return (
 
       <div className="wrapper">
         <Navi />
         <div className="container border mt-5">
           <div className="row">
-            <HomeHelp />
+            <HomeHelp languagesAry={this.props.languages}/>
             <HomeTips />
           </div>
         </div>
@@ -28,7 +25,6 @@ class HomeMain extends React.Component {
 }
 
 HomeMain.propTypes = {
-  convoAry: PropTypes.array,
-  notesAry: PropTypes.array
+  languages: PropTypes.array
 };
 export default HomeMain

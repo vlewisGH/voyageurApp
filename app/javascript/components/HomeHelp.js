@@ -12,36 +12,11 @@ export class HomeHelp extends React.Component {
     //   {},
     //   {}
     // ];
-    const jsHConvos =[
-      {id:'convo_1',title:'React vs Angular'},
-      {id:'convo_2',title:'React vs Angular'},
-      {id:'convo_3',title:'React vs Angular'},
-      {id:'convo_4',title:'React vs Angular'},
-      
-    ];
-    const langAry = [
-      {lang:'HTML',
-       noOfConvos: 2
-      },
-      {lang:'CSS',
-       noOfConvos: 3
-      },
-      {lang:'JS',
-       noOfConvos: jsHConvos.length
-      },
-      {lang:'JQuery',
-       noOfConvos: 6
-      },
-      {lang:'JAVA',
-       noOfConvos: 10
-      },
-      {lang:'SQL',
-       noOfConvos: 7
-      }
-    ];
+
+    const langAry = this.props.languagesAry;
     
     const rendLang = langAry.map((obj,i)=>
-      <div className="col-6 " key={'lang_'+i}><a href="/help" className="d-block p-2">{obj.lang} <br /><span className="badge badge-light">{obj.noOfConvos}</span></a></div>
+      <div className="col-6 " key={'lang_'+i}><a href={"/help/"+obj.id} className="d-block p-2">{obj.lang}</a></div>
     );
 
     return (
@@ -60,4 +35,7 @@ export class HomeHelp extends React.Component {
   }
 }
 
+HomeHelp.propTypes = {
+  languagesAry: PropTypes.array
+};
 export default HomeHelp
